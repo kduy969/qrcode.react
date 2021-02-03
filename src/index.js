@@ -462,4 +462,4 @@ const ForwardComp = React.forwardRef((props: any, ref: any) => (
   <QRCode innerRef={ref} {...props} />
 ));
 
-module.exports = ForwardComp;
+module.exports = QRCodeCanvas;
