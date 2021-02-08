@@ -230,7 +230,7 @@ class QRCodeCanvas extends React.PureComponent<QRProps, {imgLoaded: boolean}> {
     this.update();
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps: any) {
     const currentSrc = this.props.imageSettings?.src;
     const nextSrc = nextProps.imageSettings?.src;
     if (currentSrc !== nextSrc) {
@@ -457,9 +457,5 @@ const QRCode = (props): React.Node => {
 };
 
 QRCode.defaultProps = {renderAs: 'canvas', ...DEFAULT_PROPS};
-
-const ForwardComp = React.forwardRef((props: any, ref: any) => (
-  <QRCode innerRef={ref} {...props} />
-));
 
 module.exports = QRCodeCanvas;
